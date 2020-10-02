@@ -1,0 +1,88 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+
+    <ion-menu contentId="main-content" type="overlay" color="tertiary">
+      <ion-header>
+
+
+        <div class="qr">
+          <div class="iconesMenuSuperior">
+            <ion-icon color="medium" name="qr-code-outline"></ion-icon>
+            <ion-title color="medium" class="qrtxt">Acessar Cesta</ion-title>
+          </div>
+
+          <div class="iconesMenuSuperior">
+            <ion-icon color="secondary" name="person-circle-outline"></ion-icon>
+            <ion-title color="secondary" class="qrtxt">Espelho</ion-title>
+          </div>
+
+          <div class="iconesMenuSuperior">
+            <ion-icon color="secondary" name="map-outline"></ion-icon>
+            <ion-title color="secondary" class="qrtxt">Encontre</ion-title>
+          </div>
+        </div>
+
+      </ion-header>
+      <ion-content>
+  
+
+        <ion-list>
+          <div class="nomeCliente">
+            Bem vinda Marina
+            <ion-icon class="icone" name="chevron-forward-circle"></ion-icon>
+          </div>
+          <ion-item-divider>
+            <ion-label>
+              Produtos
+            </ion-label>
+
+
+          </ion-item-divider>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of produtos">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-item-divider>
+
+
+
+            <ion-label>
+              Seu Cadastro
+            </ion-label>
+          </ion-item-divider>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of cadastro">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-item-divider>
+            <ion-label>
+              Nos conheça mais
+            </ion-label>
+          </ion-item-divider>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of empresa">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+
+
+
+</ion-app>

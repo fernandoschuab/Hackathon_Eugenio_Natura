@@ -1,0 +1,66 @@
+
+
+ .profile {
+  font-size: 40px !important;
+  color: #C8C8A9 !important;
+  //margin: auto !important;
+  padding: 0px !important;
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+
+ }
+
+.nome{
+  font-size: 1.5em !important;
+  color: #C8C8A9 !important;
+  margin-left: 1em;
+
+}
+
+.qr{
+  margin-top: 12px ;
+  margin-bottom: 5px ;
+  font-size: 2em ;
+  // color: var(medium-shade);
+  // margin-right: 1em;
+  float: right;
+
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+
+  .qrtxt{
+    font-size: 0.3em !important;
+    align-items: center;
+    padding-inline-start: 5px !important;
+    padding-inline-end: 5px !important;
+  }
+  .iconesMenuSuperior{
+    flex-direction: column !important;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ 
+    
+
+  }
+}
+
+.nomeCliente{
+  margin-top: 10px ;
+  margin-bottom: 5px ;
+  font-size: 1.5em ;
+  color: var(--ion-color-secondary);
+  float: right;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  .icone{
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+
+}

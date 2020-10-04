@@ -9,13 +9,44 @@
 
    
     <ion-buttons  slot="end" class="carrinho" >
-      <ion-icon class="carrinho" slot="start" name="basket"(click)="selectCarrinho()"> 
+      <ion-icon class="carrinho" slot="start" name="basket"> 
       </ion-icon>
       <ion-badge class="notifications-badge">5</ion-badge>
       <!-- <ion-badge class="notifications-badge">{{qtde()}}</ion-badge> -->
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+<ion-content>
+  <!-- Fallback for iOS PWA -->
+  <input #fileinput type="file" accept="image/*;capture=camera" hidden (change)="handleFile($event.target.files)">
+ 
+  <!-- Trigger the file input -->
+  <!-- <ion-button expand="full" (click)="captureImage()">
+    <ion-icon slot="start" name="camera"></ion-icon>
+    Capture Image
+  </ion-button> -->
+ 
+  <ion-button expand="full" (click)="startScan()">
+    <ion-icon slot="start" name="qr-scanner"></ion-icon>
+    Escanear QR Code da Cesta
+  </ion-button>
+ 
+  <!-- <ion-button expand="full" (click)="reset()" color="warning" *ngIf="scanResult">
+    <ion-icon slot="start" name="refresh"></ion-icon>
+    Reset
+  </ion-button> -->
+ 
+  <!-- Shows our camera stream -->
+  <video #video [hidden]="!scanActive" width="100%"></video>
+ 
+  <!-- Used to render the camera stream images -->
+  <canvas #canvas hidden></canvas>
+ 
+
+  
+ 
+</ion-content>
 
 
 <ion-content>

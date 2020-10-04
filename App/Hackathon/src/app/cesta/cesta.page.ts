@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cesta',
@@ -7,11 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CestaPage implements OnInit {
   items: any = new Array();
+  idCesta: string = "";
   cestaLiberada: boolean = false;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) {}
 
   ngOnInit() {
+    this.idCesta = this.router.getCurrentNavigation().extras.state as any;
   }
 
 }

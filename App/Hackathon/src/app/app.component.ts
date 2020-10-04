@@ -34,7 +34,7 @@ public logado: string  = 'Login';
     {
       divider: 'A',
       title: 'Categorias',
-      url: '/categorias',
+      url: '/qr',
       icon: 'list'
     },
    ];
@@ -42,7 +42,7 @@ public logado: string  = 'Login';
    public cadastro = [
     {
       title: 'Meus Pedidos',
-      url: '/pedidos-lista',
+      url: '/cesta',
       icon: 'paper-plane'
     },
     {

@@ -20,7 +20,7 @@ public logado: string  = 'Login';
 
   public produtos = [
     {
-      title: 'Kits',
+      title: 'itens',
       url: '/kits',
       icon: 'basket'
       

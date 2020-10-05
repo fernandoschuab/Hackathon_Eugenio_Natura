@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class CestaPage implements OnInit {
   items: any = new Array();
   idCesta: string = "";
-  cestaLiberada: boolean = false;
+  cestaLiberada: boolean = true;
 
   constructor(
     private router: Router

@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button color="secondary"></ion-menu-button>
     </ion-buttons>
-    <ion-title color="light">QR Code
+    <ion-title color="medium">Cesta Conectada
     </ion-title>
 
 
@@ -11,7 +11,7 @@
     <ion-buttons  slot="end" class="carrinho" >
       <ion-icon class="carrinho" slot="start" name="basket"> 
       </ion-icon>
-      <ion-badge class="notifications-badge">5</ion-badge>
+      <ion-badge class="notifications-badge">3</ion-badge>
       <!-- <ion-badge class="notifications-badge">{{qtde()}}</ion-badge> -->
     </ion-buttons>
   </ion-toolbar>
@@ -21,54 +21,51 @@
 
 <ion-content>
 
+
   <ion-list lines="full">
     <ion-item-sliding>
-      <!-- <ion-item-sliding *ngFor="let item of items" (click)="selectItem(item)"> -->
-    <ion-item > 
-      <!-- <div *ngIf="item.foto">
-        <p slot="start"><img src="http://feiranoapptcc-com-br.umbler.net/storage/{{item.foto}}" alt=""/></p>
-      </div>
-      <div *ngIf="!item.foto"> -->
-        
-        <p slot="start"><img src="https://static.natura.com/sites/default/files/styles/product_detail_square/public/products/96510_1_9.jpg" alt=""/></p>
-      <!-- </div> -->
-      
-      <p slot="end"     style="margin-left: 0px"> R$10,50</p>
+<!-- 
+      <ion-item >
+        <ion-label>
+          Nenhum item na cesta
+        </ion-label>
+      </ion-item> -->
+
+
+    <ion-item >  
+      <p slot="start"><img src="https://static.natura.com/sites/default/files/styles/product_detail_square/public/products/62529_1_9.jpg" alt=""/></p>
+      <p slot="end"     style="margin-left: 0px"> R$ 60,90</p>
       <!-- <p slot="end"> {{item.preco | real}}</p> -->
       <ion-label>
         <!-- {{item.nomeItem}}  -->
-        Sabonete líquido
+        NÉCTAR DESODORANTE HIDRATANTE CORPORAL MARACUJÁ
         <p>
-          Qtde:2
+          Qtde:1
         </p>
-
         <!-- <p> {{item.descricaoItem}}</p> -->
-       
       </ion-label>
     </ion-item>
 
 
-    <ion-item > 
-      <!-- <div *ngIf="item.foto">
-        <p slot="start"><img src="http://feiranoapptcc-com-br.umbler.net/storage/{{item.foto}}" alt=""/></p>
-      </div>
-      <div *ngIf="!item.foto"> -->
-        
-        <p slot="start"><img src="https://img.clasf.com.br/2020/04/03/Sabonete-Natura-flor-de-lis-20200403234955.9910590015.jpg" alt=""/></p>
-      <!-- </div> -->
-      
-      <p slot="end"> R$10,50</p>
+    <ion-item >  
+      <p slot="start"><img src="https://static.natura.com/sites/default/files/styles/product_detail_square/public/products/58415_1_12.jpg?itok=sj0h-V-V" alt=""/></p>
+      <p slot="end"     style="margin-left: 0px"> R$ 89,90</p>
       <!-- <p slot="end"> {{item.preco | real}}</p> -->
       <ion-label>
         <!-- {{item.nomeItem}}  -->
-        Sabonete 
+        EKOS FLOR DO LUAR
         <p>
           Qtde:2
         </p>
         <!-- <p> {{item.descricaoItem}}</p> -->
-       
       </ion-label>
     </ion-item>
+
+
+
+   
+
+
   </ion-item-sliding>
   </ion-list>
 
@@ -106,7 +103,7 @@
 
     </ion-card-content>
   </ion-card>
-  <ion-button class="finalizarCompra" expand="full" color="tertiary">Finalizar Compra</ion-button>
+  <ion-button class="finalizarCompra" expand="full" color="secondary">Finalizar Compra</ion-button>
 </div>
 
 <div *ngIf="!cestaLiberada">

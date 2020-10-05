@@ -1,11 +1,10 @@
 import { ItemCestaModel } from './ItemCestaModel';
-export class PedidoCestaModel{
+export class PedidoModel{
     codPedido: string;
     idCestaFisica: string;
     itensCesta: Array<ItemCestaModel>;
-    precoUnidadeProduto: number;
     precoTotal: number;
-    descontoPedido: number;
+    descontoPedido: number = 0;
     codCliente: string;
 
     constructor(){

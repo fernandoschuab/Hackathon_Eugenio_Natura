@@ -1,9 +1,9 @@
+import { ProdutoModel } from './produtoModel';
+
 export class ItemCestaModel{
-    codProduto: string;
-    codCarrinho: string;
+    codProduto: ProdutoModel;
     qtdeProduto: number;
     precoUnidadeProduto: number;
-
 
     constructor(){
     }

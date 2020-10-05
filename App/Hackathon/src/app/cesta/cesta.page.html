@@ -21,43 +21,28 @@
 
 <ion-content>
 
-
+  <div class="valor">
+    {{valorNum | real}}
+    </div>
+    <div class="valorTexto">
+      Valor pedido atual: 
+    </div>
+    
   <ion-list lines="full">
-    <ion-item-sliding>
-<!-- 
-      <ion-item >
-        <ion-label>
-          Nenhum item na cesta
-        </ion-label>
-      </ion-item> -->
+    <ion-item-sliding  *ngFor="let item of cesta" >
 
 
     <ion-item >  
-      <p slot="start"><img src="https://static.natura.com/sites/default/files/styles/product_detail_square/public/products/62529_1_9.jpg" alt=""/></p>
-      <p slot="end"     style="margin-left: 0px"> R$ 60,90</p>
-      <!-- <p slot="end"> {{item.preco | real}}</p> -->
-      <ion-label>
-        <!-- {{item.nomeItem}}  -->
-        NÉCTAR DESODORANTE HIDRATANTE CORPORAL MARACUJÁ
-        <p>
-          Qtde:1
-        </p>
-        <!-- <p> {{item.descricaoItem}}</p> -->
-      </ion-label>
-    </ion-item>
+      <p slot="start"><img src="{{item.codProduto.fotoProduto}}" alt=""/></p>
+      <p slot="end"     style="margin-left: 0px"> {{item.precoUnidadeProduto | real}}</p>
 
-
-    <ion-item >  
-      <p slot="start"><img src="https://static.natura.com/sites/default/files/styles/product_detail_square/public/products/58415_1_12.jpg?itok=sj0h-V-V" alt=""/></p>
-      <p slot="end"     style="margin-left: 0px"> R$ 89,90</p>
-      <!-- <p slot="end"> {{item.preco | real}}</p> -->
       <ion-label>
-        <!-- {{item.nomeItem}}  -->
-        EKOS FLOR DO LUAR
+       
+        {{item.codProduto.nomeProduto}}
         <p>
-          Qtde:2
+          Qtde: {{item.qtdeProduto}}
         </p>
-        <!-- <p> {{item.descricaoItem}}</p> -->
+ 
       </ion-label>
     </ion-item>
 
